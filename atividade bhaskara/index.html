@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHASKARA</title>
+</head>
+<body>
+    <form>
+        <label for="inpValorA">Informe o valor de A</label>
+        <input type="number" id="inpValorA">
+        <br> 
+        <br>
+        <label for="inpValorB">Informe o valor de B</label>
+        <input type="number" id="inpValorB">
+        <br>
+        <br>
+        <label for="inpValorC">Informe o valor de C</label>
+        <input type="number" id="inpValorC">
+    </form>
+    <button onclick="calcule()">Calcule</button>
+    <div id="reultado"></div>
+
+    <script>
+      function calcule(){
+        const Valora = Number(document.getElementById("inpValorA").value);
+        const Valorb = Number(document.getElementById("inpValorB").value);
+        const Valorc = Number(document.getElementById("inpValorC").value);
+        const delta = Math.sqrt((b ** 2) - 4 * a * c);
+        const bhaskara1 = (- b + delta) / 2 * a
+        const bhaskara2 = (- b - delta) / 2 * a
+
+        let resultado;
+         if(a === 0){
+            document.getElementById('resultado').innerHTML = "Não é bhaskara"
+         }
+         else if(delta < 0){
+            document.getElementById('resultado').innerHTML = "Não existem raízes"
+         }
+         else if(delta === 0){
+            document.getElementById('resultado').innerHTML = "
+
+
+
+    
+    
+    }
+    </script>
+</body>
+</html>
