@@ -19,33 +19,41 @@
         <label for="inpValorC">Informe o valor de C</label>
         <input type="number" id="inpValorC">
     </form>
-    <button onclick="calcule()">Calcule</button>
-    <div id="reultado"></div>
-
+        <button onclick="calcule()">Calcule</button>
+        <div>
+        <h1 id="resultado"></h1>
+        <p id="x1"></p>
+        <p id="x2"></p>
+        </div>
     <script>
       function calcule(){
         const Valora = Number(document.getElementById("inpValorA").value);
         const Valorb = Number(document.getElementById("inpValorB").value);
         const Valorc = Number(document.getElementById("inpValorC").value);
-        const delta = Math.sqrt((b ** 2) - 4 * a * c);
-        const bhaskara1 = (- b + delta) / 2 * a
-        const bhaskara2 = (- b - delta) / 2 * a
+        
+        const delta = Math.sqrt(Valorb ** 2 - (4 * Valora * Valorc));
+        const bhaskara1 = (- Valorb + (delta)) / (2 * Valora);
+        const bhaskara2 = (- Valorb - (delta)) / (2 * Valora);
 
         let resultado;
-         if(a === 0){
-            document.getElementById('resultado').innerHTML = "Não é bhaskara"
+         if(Valora === 0){
+            document.getElementById('resultado').innerHTML = "Não é bhaskara";
          }
          else if(delta < 0){
-            document.getElementById('resultado').innerHTML = "Não existem raízes"
+            document.getElementById('resultado').innerHTML = "Não existem raízes";
          }
-         else if(delta === 0){
-            document.getElementById('resultado').innerHTML = "
-
-
-
-    
-    
+         else if(delta === 0) {
+         document.getElementById('resultado').innerHTML = "Existe somente uma raíz.";
+                document.getElementById('x1').innerHTML = `O X¹ é: ${bhaskara1}`;
+                document.getElementById('x2').innerHTML = `O X² é: ${bhaskara2}`;
+            }
+            else {
+                document.getElementById('resultado').innerHTML = "O resultado da correto";
+                document.getElementById('x1').innerHTML = `O X¹ é: ${bhaskara1}`;
+                document.getElementById('x2').innerHTML = `O X² é: ${bhaskara2}`;
+            }
     }
+    document.write(resultado);
     </script>
 </body>
 </html>
