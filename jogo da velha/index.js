@@ -58,6 +58,9 @@ function verifica_ganhador() {
         alert(`Temos um vencedor: ${casa03.innerHTML}`);
      }
 }
+function venceu(){
+    
+}
 
 
 
