@@ -84,6 +84,6 @@ function placar(vencedor) {
     }else{
         vitoriaO = vitoriaO + 1;
     }
-    document.getElementById("resultado").innerHTML = `<h1>Vitórias</h1> <p>X: ${vit_X}</p> <br> 
-    <p>O: ${vit_O}</p>`
+    document.getElementById("placar").innerHTML = `<h1>Vitórias</h1> <p>X: ${vitoriaX}</p> <br> 
+    <p>O: ${vitoriaO}</p>`
 }
