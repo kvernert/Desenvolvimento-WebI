@@ -26,9 +26,21 @@ body{
 h1{
     text-align: center;
 }
-
 @keyframes novaAnimacao {
     from {background-color: transparent;}
     to {background-color: lightpink;}
 }
-
+#resultado{
+    width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation: placar 4s alternate infinite;
+}
+@keyframes placar {
+    from{
+        background-color: blue;
+    }
+    to{
+        background-color: red;
+    }
+}
