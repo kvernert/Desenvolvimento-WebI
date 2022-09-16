@@ -29,17 +29,17 @@ h1{
     to {background-color: lightpink;}
 }
 #placar{
-            background-color: lightcoral;
+            background-color: palevioletred;
             box-shadow: 5px 5px 4px black;
             animation: placar 4s alternate infinite;
 
 }
 @keyframes placar {
     from{
-        background-color:  lightcoral;
+        background-color:  lightpink;
     }
     to{
-        background-color: crimson;
+        background-color:  palevioletred;
     }
 }
 #novamente{
@@ -47,4 +47,30 @@ h1{
     border-radius: 5px;
     box-shadow: 1px 2px 3px black;
     text-decoration: none;
+}
+button {
+    background-color: lightpink;
+    box-shadow: 3px 4px 1px rosybrown;
+    border: none;
+    width: 300px;
+    height: 30px;
+    animation: novaAnimacao 3s forwards;
+}
+button:hover{
+    cursor: pointer;
+}
+div {
+    text-align: center;
+}
+body{
+    background-color: palevioletred;
+}
+@keyframes final {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
 }

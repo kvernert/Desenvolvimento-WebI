@@ -1,8 +1,11 @@
 
+const numero = Number(prompt("Informe a quantidade de partidas que deseja jogar: "));
 let jogador = "X";
 
 let vitoriaX = 0;
 let vitoriaO = 0;
+
+let partida_continua = true;
 
 let casa01 = document.getElementById("casa01");
 let casa02 = document.getElementById("casa02");
@@ -20,7 +23,7 @@ document.getElementById('resultado');
 
 
 function jogada(casa) {
-    if (casa.innerHTML === ""){
+    if (casa.innerHTML === "" && partida_continua){
         casa.innerHTML = jogador;
         alterna_jogador();
 
@@ -64,6 +67,31 @@ function verifica_ganhador() {
         alert (`Deu velha!`);
     }
 function placar(vencedor) {
+    partida_continua = false;
+    if (vencedor === "X"){
+        vitoriaX = vitoriaX + 1;
+
+    }else{
+        vitoriaO = vitoriaO + 1;
+    }
+    document.getElementById("placar").innerHTML = `<h1>Vitórias</h1> <p>X: ${vitoriaX}</p> <br> 
+    <p>O: ${vitoriaO}</p>`
+
+    if (vitoriaX+vitoriaO === numero){
+        alert("Temos um campeão!");
+        if(vitoriaO > vitoriaX){
+            document.getElementById("placar").style.animation = "final 3s 1";
+        }
+        else {
+            document.getElementById("placar").style.animation = "final 3s 1";
+        }
+    }
+
+
+}
+function reinicia(){
+        jogador = prompt("Informe X ou O").toUpperCase();
+    partida_continua = true;
     casa01.innerHTML = "";
     casa02.innerHTML = "";
     casa03.innerHTML = "";
@@ -74,16 +102,5 @@ function placar(vencedor) {
     casa08.innerHTML = "";
     casa09.innerHTML = "";
 
-
-    vez = "X";
-
-
-    if (vencedor === "X"){
-        vitoriaX = vitoriaX + 1;
-
-    }else{
-        vitoriaO = vitoriaO + 1;
-    }
-    document.getElementById("placar").innerHTML = `<h1>Vitórias</h1> <p>X: ${vitoriaX}</p> <br> 
-    <p>O: ${vitoriaO}</p>`
 }
+
