@@ -81,7 +81,6 @@ function placar(vencedor) {
         alert("Temos um campeão!");
         if(vitoriaO > vitoriaX){
             document.getElementById("placar").style.animation = "final 3s 1";
-            
         }
         else {
             document.getElementById("placar").style.animation = "final 3s 1";
@@ -91,6 +90,7 @@ function placar(vencedor) {
 
 }
 function reinicia(){
+    if (vitoriaX+vitoriaO < numero){
         jogador = prompt("Informe X ou O").toUpperCase();
     partida_continua = true;
     casa01.innerHTML = "";
@@ -102,6 +102,9 @@ function reinicia(){
     casa07.innerHTML = "";
     casa08.innerHTML = "";
     casa09.innerHTML = "";
-
+    }
+    else {
+        partida_continua = false;
+    }
 }
 
