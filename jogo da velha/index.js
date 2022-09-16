@@ -81,6 +81,7 @@ function placar(vencedor) {
         alert("Temos um campeão!");
         if(vitoriaO > vitoriaX){
             document.getElementById("placar").style.animation = "final 3s 1";
+            
         }
         else {
             document.getElementById("placar").style.animation = "final 3s 1";
