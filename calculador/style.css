@@ -8,7 +8,10 @@
     background-image: linear-gradient(45deg, black, palevioletred);
     height: 100vh;
     color: white;
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .calculadora {
@@ -16,21 +19,10 @@
     background-color: transparent;
     border-radius: 15px;
     padding: 15px;
+
 }
 
 .botao {
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    cursor: pointer;
-    background-color: rgb(31, 31, 31);
-    border: none;
-    color: white;
-    margin: 3px;
-}
-
-.cor {
-    background-color: palevioletred;
     width: 50px;
     height: 50px;
     font-size: 25px;
@@ -42,11 +34,24 @@
 .botao:hover  {
     background-color: crimson;
 }
+.botao-operador{
+    background-color: palevioletred;
+}
+.botao-numero{
+    background-color: rgb(31, 31, 31);
+}
 
-#resultado {
+#visor {
     background-color: white;
+    color: black;
     width: 210px;
     height: 30px;
     margin: 5px;
     padding: 5px;
+    text-align: right;
+    font-size: 25px;
+}
+#botaoApagaUm{
+    background-color: palevioletred;
+
 }
