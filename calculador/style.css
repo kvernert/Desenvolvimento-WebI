@@ -29,12 +29,11 @@
   border: none;
   color: white;
   margin: 3px;
+  background-color: palevioletred;
+
 }
 .botao:hover {
   background-color: crimson;
-}
-.botao-operador {
-  background-color: palevioletred;
 }
 .botao-numero {
   background-color: rgb(31, 31, 31);

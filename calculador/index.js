@@ -121,5 +121,14 @@ function pressionouTecla(event) {
     }
 
 }
+let botaoPonto = document.getElementById("botaoPonto");
+botaoPonto.addEventListener('click',clicaPonto);
+function clicaPonto (event){
+    if(isNaN(visor.innerHTML)=== true){
+        visor.innerHTML = '.';
+    }
+    else if(isNaN (visor.innerHTML+'.')=== false)
+    visor.innerHTML = visor.innerHTML + '.';
+}
 
 
