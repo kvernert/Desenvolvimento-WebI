@@ -77,13 +77,49 @@ function executaOperacao(valor1, operador, valor2) {
 let body = document.getElementsByTagName("body")[0];
 body.addEventListener("keydown", pressionouTecla);
 function pressionouTecla(event) {
-    if (event.key === "×") {
+    if (event.key === "*") {
         document.getElementById("botaoMultiplicacao").click();
-    } else if (event.key === "÷") {
+    } else if (event.key === "/") {
         document.getElementById("botaoDivisao").click();
     } else if (event.key === "-") {
         document.getElementById("botaoMenos").click();
     } else if (event.key === "+") {
         document.getElementById("botaoMais").click();
     }
+    else if(event.key === "1"){
+        document.getElementById("botao1").click();
+    }
+    else if(event.key === "2"){
+        document.getElementById("botao2").click();
+    }
+    else if(event.key === "3"){
+        document.getElementById("botao3").click();
+    }
+    else if(event.key === "4"){
+        document.getElementById("botao4").click();
+    }
+    else if(event.key === "5"){
+        document.getElementById("botao5").click();
+    }
+    else if(event.key === "6"){
+        document.getElementById("botao6").click();
+    }
+    else if(event.key === "7"){
+        document.getElementById("botao7").click();
+    }
+    else if(event.key === "8"){
+        document.getElementById("botao8").click();
+    }
+    else if(event.key === "9"){
+        document.getElementById("botao9").click();
+    }
+    else if(event.key === "Escape"){
+        document.getElementById("botaoAC").click();
+    }
+    else if(event.key === "Enter"){
+        document.getElementById("botaoIgual").click();
+    }
+
 }
+
+
