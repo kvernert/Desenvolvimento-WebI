@@ -25,7 +25,7 @@ function calculeIMC(){
     }
     else if(resultadoIMC >= 23 && resultadoIMC <= 34.9){
         resposta = `Obesidade Grau 1 <br/>`;
-        cor = 'atencao'
+        cor = 'cuidado'
     }
     else if(resultadoIMC >= 35 && resultadoIMC <= 39.9){
         resposta = `Obesidade Grau 2`;
